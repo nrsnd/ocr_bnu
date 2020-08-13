@@ -1,0 +1,7 @@
+{
+  "name": "ocr_bnu",
+  "integrations": {
+    "cordova": {}
+  },
+  "type": "angular"
+}

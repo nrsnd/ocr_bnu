@@ -1,0 +1,28 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      BNU OCR TEST
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content padding>
+   
+  <ion-button full (click)="selectSource()">Select Image</ion-button>
+  <ion-button full (click)="recognizeImage()" [disabled]="!selectedImage">Recognize Image</ion-button>
+ 
+  <img [src]="imagePreview" *ngIf="selectedImage">
+ 
+  <ion-card *ngIf="imageText">
+    <ion-card-header>
+      Image Text
+    </ion-card-header>
+    <ion-card-content>
+      <ion-list *ngFor="let text of imageText">
+        <ion-item>
+          <ion-label>- {{ text }}</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-card-content>
+  </ion-card>
+</ion-content>
